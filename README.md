@@ -1,27 +1,17 @@
-The project allows you to:
 
-**Extract TransactionId
+## Структура проекта
 
-Read the list of Inputs and Outputs
+- **BsvParser** — основная библиотека парсинга
+  - `Models/` — модели транзакции (`Transaction`, `Input`, `Output`)
+  - `Services/` — сервисы для разбора транзакций
+  - `Utilities/` — вспомогательные методы для работы со скриптами и Base58
+- **BsvParser.Tests** — модульные тесты на xUnit для проверки корректности парсинга
 
-Get recipient addresses and amounts in satoshi
+---
 
-Work directly with a raw hex transaction
+## Особенности
 
-Easy to integrate into other applications or services**
+- **Поддержка стандартных скриптов P2PKH**
+- **Вычисление Transaction ID по стандарту Bitcoin**
 
-Project structure
-**BsvParser — the main parsing library
-
-Models/ — transaction models (Transaction, Input, Output)
-
-Services/ — services for parsing transactions
-
-Utilities/ — auxiliary methods for working with scripts and Base58
-
-BsvParser.Tests — xUnit unit tests for checking the correctness of parsing**
-
-Features
-**Support for standard P2PKH scripts
-
-Calculating Transaction ID according to the Bitcoin standard**
+---
